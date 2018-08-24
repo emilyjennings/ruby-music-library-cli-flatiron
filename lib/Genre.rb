@@ -1,7 +1,7 @@
 require 'pry'
 
 class Genre
-  attr_accessor :name
+  attr_accessor :name, :musiclibrarycontroller, :musicimporter
   extend Concerns::Findable
   @@all = []
 
