@@ -22,13 +22,14 @@ class MusicLibraryController
     while input != "exit"
       puts "What would you like to do?"
       input = gets.strip
+      # case input
+      #   when "list songs"
+      #     list_songs
+      #   end
+      # end
     end
 
-    # case input
-    #   when "list songs"
-    #     list_songs
-    #   end
-    # end
+
   end
 
   def list_songs
