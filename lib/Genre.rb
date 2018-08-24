@@ -2,6 +2,7 @@ require 'pry'
 
 class Genre
   attr_accessor :name
+  extend Concerns::Findable
   @@all = []
 
   def initialize(name)
@@ -31,6 +32,17 @@ class Genre
     @songs
   end
 
+  def artists
+    @new_array = []
+    @songs.each do |song|
+      if @new_array.include?(song.artist)
+        nil
+      else
+        @new_array << song.artist
+      end
+    end
+    @new_array
+  end
 
 
 end

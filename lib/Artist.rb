@@ -2,6 +2,7 @@ require 'pry'
 
 class Artist
   attr_accessor :name, :song
+  extend Concerns::Findable
   @@all = []
 
   def initialize(name)
@@ -46,7 +47,6 @@ class Artist
   end
 
   def genres
-    #binding.pry
     @new_array = []
     @songs.each do |song|
       if @new_array.include?(song.genre)
